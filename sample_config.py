@@ -30,12 +30,12 @@ class Config(object):
     TZ = os.environ.get("TZ", "Asia/Baghdad")
     # set this with required zed repo link
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/Zed-Thon/Zelzal"
+        "UPSTREAM_REPO", "https://github.com/zzzdevo/zz-bot"
     )
     # External plugins repo
     EXTERNAL_REPO = os.environ.get("EXTERNAL_REPO", None)
     if EXTERNAL_REPO and (EXTERNAL_REPO.lower() != "no") and not url(EXTERNAL_REPO):
-        EXTERNAL_REPO = "https://github.com/Zed-Thon/ZedPlugins"
+        EXTERNAL_REPO = "https://github.com/zzzdevo/zz-bot"
     VCMODE = os.environ.get("VCMODE", False)
     VCMODE = bool(VCMODE and (VCMODE.lower() != "false"))
     VC_SESSION = os.environ.get("VC_SESSION", None)
@@ -88,7 +88,7 @@ class Config(object):
     # set this will channel id of your custom plugins
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL") or 0)
     # set this value with your required name for telegraph plugin
-    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "ZThon")
+    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "IQ")
     # for custom thumb image set this with your required thumb telegraoh link
     THUMB_IMAGE = os.environ.get(
         "THUMB_IMAGE", "https://telegra.ph/file/c91c09fb188f0f281e628.jpg"
@@ -186,9 +186,9 @@ class Config(object):
     BOTLOG_CHATID = 0
     # extra plugins realted vars below  4
     EXTERNAL_REPOBRANCH = os.environ.get("EXTERNAL_REPOBRANCH", "main")
-    OLDZED_REPO = os.environ.get("OLDZED_REPO", "https://github.com/Zed-Thon/ZED_USERBOT")
+    OLDZED_REPO = os.environ.get("OLDZED_REPO", "https://github.com/zzzdevo/zz-bot")
     if OLDZED_REPO and not url(OLDZED_REPO):
-        OLDZED_REPO = "https://github.com/Zed-Thon/ZED_USERBOT"
+        OLDZED_REPO = "https://github.com/zzzdevo/zz-bot"
     OLDZED_REPOBRANCH = os.environ.get("OLDZED_REPOBRANCH", "oldzed")
     VC_REPO = os.environ.get("VC_REPO", "https://github.com/Zed-Thon/ZVCPlayer")
     VC_REPOBRANCH = os.environ.get("VC_REPOBRANCH", "beta")
