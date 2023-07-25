@@ -69,13 +69,13 @@ zel_dev = (5176749470, 5426390871)
 plugin_category = "الادمن"
 
 
-ADMZ = gvarstatus("Z_ADMIN") or "رفع مشرف"
-UNADMZ = gvarstatus("Z_UNADMIN") or "تنزيل مشرف"
-BANN = gvarstatus("Z_BAN") or "حظر"
-UNBANN = gvarstatus("Z_UNBAN") or "الغاء حظر"
-MUTE = gvarstatus("Z_MUTE") or "كتم"
-UNMUTE = gvarstatus("Z_UNMUTE") or "الغاء كتم"
-KICK = gvarstatus("Z_KICK") or "طرد"
+ADMZ = gvarstatus("Z_ADMIN") or "زیادکردنی ئەدمین"
+UNADMZ = gvarstatus("Z_UNADMIN") or "لادانی ئەدمین"
+BANN = gvarstatus("Z_BAN") or "باند"
+UNBANN = gvarstatus("Z_UNBAN") or "لادانی باند"
+MUTE = gvarstatus("Z_MUTE") or "ئاگاداری"
+UNMUTE = gvarstatus("Z_UNMUTE") or "لادانی ئاگاداری"
+KICK = gvarstatus("Z_KICK") or "دەرکردن"
 # ================================================
 
 
@@ -178,7 +178,7 @@ async def promote(event):
 
 
 
-@zedub.zed_cmd(pattern="رفع مالك(?:\s|$)([\s\S]*)")
+@zedub.zed_cmd(pattern="زیادکردنی خاوەن(?:\s|$)([\s\S]*)")
 async def promote(event):
     chat = await event.get_chat()
     admin = chat.admin_rights
@@ -215,7 +215,7 @@ async def promote(event):
         )
 
 
-@zedub.zed_cmd(pattern="اخفاء(?:\s|$)([\s\S]*)")
+@zedub.zed_cmd(pattern="شاردنەوە(?:\s|$)([\s\S]*)")
 async def promote(event):
     chat = await event.get_chat()
     admin = chat.admin_rights
@@ -297,7 +297,7 @@ async def _ban_person(event):
         return
     if user.id == event.client.uid:
         return await edit_delete(event, "**⪼ عـذراً ..لا استطيـع حظـࢪ نفسـي 𓆰**")
-    if user.id == 925972505 or user.id == 1895219306 or user.id == 2095357462:
+    if user.id == 833360381 or user.id == 833360381 or user.id == 1818734394:
         return await edit_delete(event, "**╮ ❐ دي لا يمڪنني حظـر مطـور السـورس  ❏╰**")
     if user.id in zel_dev:
         return await edit_delete(event, "**╮ ❐ دي لا يمڪنني حظـر احـد مسـاعدين السـورس  ❏╰**")
@@ -421,7 +421,7 @@ async def startmute(event):
             return await edit_or_reply(event, "**- عــذراً .. لا استطيــع كتــم نفســي**")
         if user.id in zel_dev:
             return await edit_or_reply(event, "**╮ ❐ دي لا يمڪنني كتـم احـد مساعديـن السـورس  ❏╰**")
-        if user.id == 925972505 or user.id == 1895219306 or user.id == 2095357462:
+        if user.id == 833360381 or user.id == 833360381 or user.id == 1818734394:
             return await edit_or_reply(event, "**╮ ❐ دي . . لا يمڪنني كتـم مطـور السـورس  ❏╰**")
         if is_muted(user.id, event.chat_id):
             return await edit_or_reply(
@@ -541,7 +541,7 @@ async def kick(event):
         return
     if user.id in zel_dev:
         return await edit_delete(event, "**╮ ❐ دي لا يمڪنني طـرد احـد مساعديـن السـورس  ❏╰**")
-    if user.id == 925972505 or user.id == 1895219306 or user.id == 2095357462:
+    if user.id == 833360381 or user.id == 833360381 or user.id == 1818734394:
         return await edit_delete(event, "**╮ ❐ دي . . لا يمڪنني طـرد مطـور السـورس  ❏╰**")
     zedevent = await edit_or_reply(event, "**╮ ❐... جـاࢪِ الطــࢪد ...❏╰**")
     try:
