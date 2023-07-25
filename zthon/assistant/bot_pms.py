@@ -104,10 +104,10 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"**❈╎مـرحباً بـك عزيـزي  {mention} **\
-                        \n**❈╎انـا {my_mention}' **\
-                        \n**❈╎ يمكنك التواصل مع مالك البوت فقط قم بـ ارسال رسالتك .**\
-                        \n\n**❈╎البـوت خـاص بسـورس :** [𝗭𝗧𝗵𝗼𝗻 𓅛](https://t.me/ZedThon)"
+            start_msg = f"**❈╎بەخێربێی ئەزیزم   {mention} **\
+                        \n**❈╎من {my_mention}' **\
+                        \n**❈╎ يمكنكدەتوانی پەیوەندی بە گەشەپێدەر بکەی بۆ هەرکێشەیك.**\
+                        \n\n**❈╎بۆتی تایبەت بە سەرچاوەی :** [IQ 𓅛](https://t.me/MGIMT)"
         buttons = [
             (
                 Button.url("قنـاة السـورس", "https://t.me/ZedThon"),
