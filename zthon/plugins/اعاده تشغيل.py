@@ -19,8 +19,8 @@ plugin_category = "الادوات"
 
 
 @zedub.zed_cmd(
-    pattern="اعاده تشغيل$",
-    command=("اعاده تشغيل", plugin_category),
+    pattern="دەستپێکردنەوە$",
+    command=("دەستپێکردنەوە", plugin_category),
     info={
         "header": "لـ إعـادة تشغيـل البـوت",
         "الاستخـدام": "{tr}اعاده تشغيل",
@@ -56,8 +56,8 @@ async def _(event):
 
 
 @zedub.zed_cmd(
-    pattern="ايقاف البوت$",
-    command=("ايقاف البوت", plugin_category),
+    pattern="وەستانی بۆت$",
+    command=("وەستانی بۆت", plugin_category),
     info={
         "header": "لـ إطفـاء البـوت",
         "الوصـف": "لـ إطفـاء الداينـو الخاص بتنصيبك بهيروكـو .. لا تستطيع اعاده التشغيل مرة اخرى عبر حسابك عليك الذهاب لحساب هيروكو واتباع الشرح التالي https://t.me/zzzlvv/20",
