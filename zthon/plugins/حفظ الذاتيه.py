@@ -15,7 +15,7 @@ plugin_category = "الادوات"
 LOGS = logging.getLogger(__name__)
 zedself = True
 
-POSC = gvarstatus("Z_POSC") or "(مم|ذاتية|ذاتيه|جلب الوقتيه)"
+POSC = gvarstatus("Z_POSC") or "(دزی|وێنەی ئاگر|وێنەی قفڵ|هێنانی وێنە)"
 
 ZelzalSelf_cmd = (
     "𓆩 [ᯓ 𝗦𝗼𝘂𝗿𝗰𝗲 𝗭𝗧𝗵𝗼𝗻 - حفـظ الذاتيـه 🧧](t.me/ZedThon) 𓆪\n\n"
@@ -30,7 +30,7 @@ ZelzalSelf_cmd = (
 )
 
 
-@zedub.zed_cmd(pattern="الذاتيه")
+@zedub.zed_cmd(pattern="وێنەی قفڵ")
 async def cmd(zelzallll):
     await edit_or_reply(zelzallll, ZelzalSelf_cmd)
 
@@ -43,7 +43,7 @@ async def oho(event):
     await zedub.send_file("me", pic, caption=f"**⎉╎تم حفـظ الصـورة الذاتيـه .. بنجـاح ☑️𓆰**")
     await event.delete()
 
-@zedub.zed_cmd(pattern="(تفعيل الذاتيه|تفعيل الذاتية)")
+@zedub.zed_cmd(pattern="(چالاککردنی وێنەی قفڵ)")
 async def start_datea(event):
     global zedself
     if zedself:
@@ -51,7 +51,7 @@ async def start_datea(event):
     zedself = True
     await edit_or_reply(event, "**⎉╎تم تفعيـل حفظ الذاتيـة التلقائـي .. بنجـاح ☑️**")
 
-@zedub.zed_cmd(pattern="(تعطيل الذاتيه|تعطيل الذاتية)")
+@zedub.zed_cmd(pattern="(لەکارخستنی وێنەی قفڵ)")
 async def stop_datea(event):
     global zedself
     if zedself:
