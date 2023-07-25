@@ -32,7 +32,7 @@ SONG_SENDING_STRING = "<b>╮ جـارِ تحميـل الاغنيـٓه... 🎧
 
 
 @zedub.zed_cmd(
-    pattern="بحث(320)?(?:\s|$)([\s\S]*)",
+    pattern="گۆرانی(320)?(?:\s|$)([\s\S]*)",
     command=("بحث", plugin_category),
     info={
         "header": "لـ تحميـل الاغـانـي مـن يـوتيـوب",
@@ -79,8 +79,8 @@ async def song(event):
 
 
 @zedub.zed_cmd(
-    pattern="فيديو(?:\s|$)([\s\S]*)",
-    command=("فيديو", plugin_category),
+    pattern="ڤیدیۆ(?:\s|$)([\s\S]*)",
+    command=("ڤیدیۆ", plugin_category),
     info={
         "header": "لـ تحميـل مقـاطـع الفيـديـو مـن يـوتيـوب",
         "الاسـتخـدام": "{tr}فيديو + اسـم المقطـع",
@@ -123,8 +123,8 @@ async def vsong(event):
 
 
 @zedub.zed_cmd(
-    pattern="ابحث(?:\ع|$)([\s\S]*)",
-    command=("ابحث", plugin_category),
+    pattern="شەزەم(?:\ش|$)([\s\S]*)",
+    command=("شەزەم", plugin_category),
     info={
         "header": "To reverse search song.",
         "الوصـف": "Reverse search audio file using shazam api",
