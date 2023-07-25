@@ -1,18 +1,3 @@
-# Zed-Thon - ZelZal
-# Copyright (C) 2022 Zedthon . All Rights Reserved
-#
-# This file is a part of < https://github.com/Zed-Thon/ZelZal/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/Zed-Thon/ZelZal/blob/main/LICENSE/>.
-
-"""
-ZThon - ZelZal
-- كتـابـة الاضـافـات
-زلــزال الـهيبــه - @zzzzl1l
-- حقـوق زدثـــون @ZedThon
-- تخمـط صيـر مطـور كفــوو واذكــر المصــدر
-"""
-
 import contextlib
 import html
 import os
@@ -37,14 +22,12 @@ from . import spamwatch
 plugin_category = "العروض"
 LOGS = logging.getLogger(__name__)
 # code by t.me/zzzzl1l
-ZED_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•⎚• مـعلومـات المسـتخـدم مـن بـوت زدثــون"
+ZED_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•⎚• زانیاری بەکارهێنەر"
 ZEDM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "✦ "
 ZEDF = gvarstatus("CUSTOM_ALIVE_FONT") or "⋆─┄─┄─┄─ ᶻᵗʰᵒᶰ ─┄─┄─┄─⋆"
-zed_dev = (5176749470, 1895219306, 925972505, 5280339206, 5426390871)
-zel_dev = (5176749470, 5426390871)
-zelzal = (925972505, 1895219306, 5280339206)
-
-
+zed_dev = (833360381,1818734394)
+zel_dev = (833360381,1818734394)
+zelzal = (833360381)
 async def get_user_from_event(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
@@ -110,25 +93,25 @@ async def fetch_info(replied_user, event):
 # Copyright (C) 2021 Zed-Thon . All Rights Reserved
 # الـرتب الوهميـه & البريميـوم كتـابـة الكـود - زلــزال الـهيبــه @zzzzl1l
     if user_id in zelzal: # code by t.me/zzzzl1l
-        rotbat = "⌁ مطـور السـورس 𓄂𓆃 ⌁" 
+        rotbat = "⌁ گەشەپێدەری سەرچاوە 𓄂𓆃 ⌁" 
     elif user_id in zel_dev:
-        rotbat = "⌁ مطـور مسـاعـد 𐏕⌁" 
+        rotbat = "⌁ گەشەپێدەری یارمەتیدەر 𐏕⌁" 
     elif user_id == (await event.client.get_me()).id and user_id not in zed_dev:
-        rotbat = "⌁ مـالك الحساب 𓀫 ⌁" 
+        rotbat = "⌁ خاوەن ئەکاونت 𓀫 ⌁" 
     else:
-        rotbat = "⌁ العضـو 𓅫 ⌁"
+        rotbat = "⌁ ئەندام 𓅫 ⌁"
     caption = f"<b> {ZED_TEXT} </b>\n"
     caption += f"ٴ<b>{ZEDF}</b>\n"
-    caption += f"<b>{ZEDM}الاسـم    ⇠ </b> "
+    caption += f"<b>{ZEDM}ناو    ⇠ </b> "
     caption += f'<a href="tg://user?id={user_id}">{full_name}</a>'
-    caption += f"\n<b>{ZEDM}المعـرف  ⇠  {username}</b>"
-    caption += f"\n<b>{ZEDM}الايـدي   ⇠ </b> <code>{user_id}</code>\n"
-    caption += f"<b>{ZEDM}الرتبـــه   ⇠ {rotbat} </b>\n"
+    caption += f"\n<b>{ZEDM}یوزەر  ⇠  {username}</b>"
+    caption += f"\n<b>{ZEDM}ئایدی   ⇠ </b> <code>{user_id}</code>\n"
+    caption += f"<b>{ZEDM}ڕۆڵت   ⇠ {rotbat} </b>\n"
     if zilzal == True or user_id in zelzal: # code by t.me/zzzzl1l
-        caption += f"<b>{ZEDM}الحسـاب ⇠  بـريميـوم 🌟</b>\n"
-    caption += f"<b>{ZEDM}الصـور    ⇠ </b> {replied_user_profile_photos_count}\n"
+        caption += f"<b>{ZEDM}ئەکاونت ⇠  پریمیوم 🌟</b>\n"
+    caption += f"<b>{ZEDM}وێنە    ⇠ </b> {replied_user_profile_photos_count}\n"
     if user_id != (await event.client.get_me()).id: # code by t.me/zzzzl1l
-        caption += f"<b>{ZEDM}الـمجموعات المشتـركة ⇠ </b> {common_chat} \n"
+        caption += f"<b>{ZEDM}گرووپی هاوبەش ⇠ </b> {common_chat} \n"
     caption += f"<b>{ZEDM}البايـو     ⇠  {user_bio}</b> \n"
     caption += f"ٴ<b>{ZEDF}</b>"
     return photo, caption
@@ -136,8 +119,8 @@ async def fetch_info(replied_user, event):
 
 
 @zedub.zed_cmd(
-    pattern="ايدي(?: |$)(.*)",
-    command=("ايدي", plugin_category),
+    pattern="ا(?: |$)(.*)",
+    command=("ا", plugin_category),
     info={
         "header": "لـ عـرض معلومـات الشخـص",
         "الاستـخـدام": " {tr}ايدي بالـرد او {tr}ايدي + معـرف/ايـدي الشخص",
@@ -174,8 +157,8 @@ async def who(event):
 
 
 @zedub.zed_cmd(
-    pattern="ا(?: |$)(.*)",
-    command=("ا", plugin_category),
+    pattern="ئایدی(?: |$)(.*)",
+    command=("ئایدی", plugin_category),
     info={
         "header": "امـر مختصـر لـ عـرض معلومـات الشخـص",
         "الاستـخـدام": " {tr}ا بالـرد او {tr}ا + معـرف/ايـدي الشخص",
